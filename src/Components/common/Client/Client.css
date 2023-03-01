@@ -1,0 +1,174 @@
+.client {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.client__img {
+  padding-left: 40px;
+}
+
+.client__info {
+  position: absolute;
+  right: 55px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #152934;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.client__info span {
+  color: #4D533C;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.grand {
+  margin-top: 35px;
+}
+
+@media screen and (max-width: 1050px) {
+  .client__img {
+    padding-left: 40px;
+  }
+  .client__img img {
+    width: 70%;
+  }
+  .client__info {
+    right: 55px;
+    margin-top: 17px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .client__info span {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .grand {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .client__img {
+    padding-left: 20px;
+  }
+  .client__img img {
+    width: 70%;
+  }
+  .client__info {
+    right: 45px;
+    margin-top: 17px;
+    font-size: 10px;
+    line-height: 17px;
+  }
+  .client__info span {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .client__info {
+    right: 35px;
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 17px;
+  }
+  .client__info span {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .client__img {
+    padding-left: 20px;
+  }
+  .client__img img {
+    width: 50%;
+  }
+  .client__info {
+    right: 25px;
+    margin-top: 17px;
+    font-size: 8px;
+    line-height: 17px;
+  }
+  .client__info span {
+    font-size: 11px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .client__img {
+    padding-left: 20px;
+  }
+  .client__img img {
+    width: 30%;
+  }
+  .client__info {
+    right: 25px;
+    margin-top: 7px;
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .client__info span {
+    font-size: 9px;
+    line-height: 15px;
+  }
+  .grand {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .client__img {
+    padding-left: 10px;
+  }
+  .client__img img {
+    width: 30%;
+  }
+  .client__info {
+    right: 25px;
+    margin-top: 0px;
+    font-size: 6px;
+    line-height: 10px;
+  }
+  .client__info span {
+    font-size: 7px;
+    line-height: 15px;
+  }
+  .grand {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .client__info {
+    font-size: 5px;
+  }
+  .client__info span {
+    font-size: 6px;
+  }
+  .grand {
+    margin-top: 15px;
+  }
+}
+/*# sourceMappingURL=Client.css.map */

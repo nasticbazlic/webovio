@@ -1,0 +1,24 @@
+.list {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 38px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.list li {
+  color: #B6C197;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  text-transform: none;
+}
+
+.list li:first-child {
+  margin-top: 21px;
+}
+
+.list li:hover {
+  color: #FFD723;
+}
+/*# sourceMappingURL=list.css.map */

@@ -1,0 +1,857 @@
+@mixin flex($dir: row, $content: center, $align: center) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: $content;
+	align-items: $align;
+}
+@mixin font($weight: 400, $size: 16px) {
+	font-weight: $weight;
+	font-size: $size;
+}
+$color: #4D533C;
+$margin-common: 150px;
+.home {
+	&__header {
+		position: relative;
+		height: 811px;
+  	background: url(../../Assets/images/Bitmap.png);
+		background-size: 100% 100%;
+		&_info {
+			margin-top: 120px;
+			@include flex($dir: column, $content: flex-start, $align: flex-start);
+			color: #fff;
+			&_pretitle {
+				@include font;
+			}
+			&_title {
+				margin-top: 20px;
+				@include font($weight: 700, $size: 60px);
+				line-height: 74px;
+				width: 616px;
+			}
+			&_subtitle {
+				margin-top: 24px;
+				@include font;
+				width: 580px;
+				line-height: 26px;
+			}
+		}
+		&_brends {
+			z-index: 22;
+			margin-top: 100px;
+			position: absolute;
+			right: 0;
+			background: #fff;
+			height: 227px;
+			width: 1276px;
+			@include flex($content: space-around);
+			box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+			border-radius: 2px;
+		}
+	}
+
+	&__strategy {
+		@include flex($content: space-between, $align: flex-start);
+		position: relative;
+		&_info {
+			margin-top: 230px;
+			@include flex($dir: column, $content: flex-start, $align: flex-start);
+			color: $color;
+			&_pretitle {
+				@include font($size: 14px);
+			}
+			&_title {
+				margin-top: 29px;
+				width: 474px;
+				@include font($weight: 700, $size: 36px);
+				span {
+					background: #fff2b9;
+				}
+			}
+			&_subtitle {
+				width: 475px;
+				margin-top: 35px;
+				@include font;
+				color: #213842;				
+			}
+		}
+		&_coment {
+			background: #FFFFFF;
+			box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+			width: 474px;
+			height: 644px;
+			z-index: 1;
+			&_text {
+				margin-top: 223px;
+				font-style: italic;
+				@include font($size: 24px);
+				line-height: 40px;
+				color: $color;
+				padding: 0 40px;
+			}
+		}
+	}
+
+	&__project {
+		hr {
+			margin-top: $margin-common;
+			height: 1px;
+			border: none;
+			background: rgba(33, 56, 66, 0.0955529);
+		}
+		&_info {
+			margin-top: $margin-common;
+			@include flex($content: space-around);
+			&_title {
+				width: 325px;
+				@include font($weight: 700, $size: 36px);
+				color: #4D533C;
+				line-height: 54px;
+			}
+			&_subtitle {
+				@include font;
+				color: rgba(33, 56, 66, 0.6);
+				width: 518px;
+			}
+		}
+	}
+	
+	&__product {
+		&_item {
+			margin-top: 100px;
+			@include flex($content: space-between);
+			&_img {
+				position: relative;
+			}
+		}
+	}
+
+	&__evaluation {
+    position: relative;
+    padding-bottom: 306px;
+		hr {
+			margin-top: $margin-common;
+			height: 1px;
+			border: none;
+			background: rgba(33, 56, 66, 0.0955529);
+		}
+
+		&_title {
+			margin-top: $margin-common;
+      @include font($weight: 700, $size: 36px);
+      line-height: 46px;
+      color: $color;
+      width: 600px;
+		}
+
+    &_list {
+      margin-top: 87px;
+      @include flex($content: space-between);
+      &_item {
+        width: 225px;
+        height: 309px;
+        @include flex($dir: column, $content: space-between, $align: flex-start);
+        &_title {
+          color: $color;
+          @include font($weight: 500, $size: 24px);
+          text-transform: uppercase;
+        }
+        &_info {
+          @include font($weight: 400, $size: 14px);
+          color: rgba(33, 56, 66, 0.6);
+        }
+      }
+    }
+
+    &_call {
+      position: absolute;
+      bottom: -159px;
+      left: 0;
+      width: 1275px;
+      height: 362px;
+      background: #FAFAFA;
+      box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+      @include flex($dir: column);
+      &_title {
+        color: $color;
+        @include font($weight: 700, $size: 60px);
+        line-height: 74px;
+      }
+    }
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	.home {
+    &__header {
+      &_brends {
+        margin-top: 100px;
+        height: 200px;
+        width: 1050px;
+        img {
+          width: 80%;
+        }
+      }
+    }
+
+    &__evaluation {
+        &_call {
+        width: 1200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+	.home {
+    &__header {
+      &_brends {
+        margin-top: 130px;
+        height: 150px;
+        width: 900px;
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 250px;
+      &_call {
+        bottom: -149px;
+        width: 1000px;
+        height: 302px;
+        &_title {
+          @include font($weight: 700, $size: 50px);
+          line-height: 64px;
+        }
+      }
+    }
+
+    &__product {
+      &_item {
+        &_img {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  $margin-common: 100px;
+	.home {
+    &__header {
+      height: 650px;
+      &_info {
+        margin-top: 90px;
+        &_title {
+          margin-top: 20px;
+          @include font($weight: 700, $size: 50px);
+          line-height: 60px;
+          width: 466px;
+        }
+        &_subtitle {
+          margin-top: 20px;
+          width: 500px;
+        }
+      }
+      &_brends {
+        margin-top: 50px;
+        width: 760px;
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    &__strategy {
+      &_info {
+        margin-top: 180px;
+        &_title {
+          margin-top: 20px;
+          width: 350px;
+          @include font($weight: 700, $size: 30px);
+        }
+        &_subtitle {
+          width: 375px;
+          margin-top: 30px;			
+        }
+      }
+      &_coment {
+        width: 404px;
+        height: 544px;
+        &_text {
+          margin-top: 180px;
+          @include font($size: 20px);
+          line-height: 32px;
+          padding: 0 40px;
+        }
+      }
+    }
+
+    &__project {
+      hr {
+        margin-top: $margin-common;
+      }
+      &_info {
+        margin-top: $margin-common;
+        &_title {
+          width: 275px;
+          @include font($weight: 700, $size: 30px);
+          line-height: 44px;
+        }
+        &_subtitle {
+          @include font($size: 14px);
+          width: 400px;
+        }
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 200px;
+      hr {
+        margin-top: $margin-common;
+      }
+  
+      &_title {
+        margin-top: $margin-common;
+        @include font($weight: 700, $size: 30px);
+        line-height: 40px;
+        width: 500px;
+      }
+  
+      &_list {
+        margin-top: 50px;
+        &_item {
+          width: 170px;
+          height: 300px;
+          &_title {
+            @include font($weight: 500, $size: 20px);
+          }
+        }
+      }
+  
+      &_call {
+        bottom: -119px;
+        width: 800px;
+        height: 250px;
+        &_title {
+          @include font($weight: 700, $size: 40px);
+          line-height: 54px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+	.home {
+    &__header {
+      height: 550px;
+      &_info {
+        margin-top: 50px;
+        &_pretitle {
+          @include font($size: 14px);
+        }
+        &_title {
+          margin-top: 10px;
+          @include font($weight: 700, $size: 40px);
+          line-height: 50px;
+          width: 406px;
+        }
+        &_subtitle {
+          margin-top: 20px;
+          @include font($size: 14px);
+          width: 400px;
+          line-height: 22px;
+        }
+      }
+      &_brends {
+        margin-top: 40px;
+        width: 600px;
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    &__strategy {
+      &_info {
+        margin-top: 140px;
+        &_title {
+          margin-top: 20px;
+          width: 280px;
+          @include font($weight: 700, $size: 25px);
+        }
+        &_subtitle {
+          width: 295px;
+          margin-top: 20px;			
+        }
+      }
+      &_coment {
+        width: 364px;
+        height: 454px;
+        &_text {
+          margin-top: 130px;
+          @include font($size: 18px);
+          line-height: 30px;
+          padding: 0 40px;
+        }
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 170px;
+      &_title {
+        @include font($weight: 700, $size: 25px);
+        line-height: 35px;
+        width: 415px;
+      }
+  
+      &_list {
+        &_item {
+          width: 150px;
+          height: 250px;
+          &_title {
+            @include font($weight: 500, $size: 18px);
+          }
+          &_info {
+            @include font($weight: 400, $size: 12px);
+          }
+        }
+      }
+  
+      &_call {
+        bottom: -109px;
+        width: 730px;
+        height: 220px;
+        &_title {
+          @include font($weight: 700, $size: 30px);
+          line-height: 44px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  $margin-common: 60px;
+	.home {
+    &__header {
+      height: 500px;
+      &_brends {
+        margin-top: 50px;
+        height: 120px;
+        width: 600px;
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    &__strategy {
+      &_info {
+        margin-top: 100px;
+        &_pretitle {
+          @include font($size: 12px);
+        }
+        &_title {
+          margin-top: 10px;
+          width: 220px;
+          @include font($weight: 700, $size: 20px);
+        }
+        &_subtitle {
+          width: 240px;
+          margin-top: 10px;	
+          @include font($size: 12px);		
+        }
+      }
+      &_coment {
+        width: 304px;
+        height: 395px;
+        &_text {
+          margin-top: 100px;
+          @include font($size: 16px);
+          line-height: 26px;
+          padding: 0 30px;
+        }
+      }
+    }
+
+    &__project {
+      hr {
+        margin-top: $margin-common;
+      }
+      &_info {
+        margin-top: $margin-common;
+        &_title {
+          width: 232px;
+          @include font($weight: 700, $size: 22px);
+          line-height: 30px;
+        }
+        &_subtitle {
+          @include font($size: 11px);
+          width: 295px;
+        }
+      }
+    }
+
+    &__product {
+      &_item {
+        margin-top: 60px;
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 120px;
+      hr {
+        margin-top: $margin-common;
+      }
+
+      &_title {
+        margin-top: $margin-common;
+        @include font($weight: 700, $size: 20px);
+        line-height: 30px;
+        width: 332px;
+      }
+  
+      &_list {
+        margin-top: 30px;
+        &_item {
+          width: 110px;
+          height: 200px;
+          &_title {
+            @include font($weight: 500, $size: 14px);
+          }
+          &_info {
+            @include font($weight: 400, $size: 10px);
+          }
+        }
+      }
+  
+      &_call {
+        bottom: -99px;
+        width: 620px;
+        height: 190px;
+        &_title {
+          @include font($weight: 700, $size: 25px);
+          line-height: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 676px) {
+	.home {
+    &__header {
+      height: 400px;
+      &_info {
+        margin-top: 30px;
+        &_pretitle {
+          @include font($size: 12px);
+        }
+        &_title {
+          @include font($weight: 700, $size: 30px);
+          line-height: 40px;
+          width: 306px;
+        }
+        &_subtitle {
+          @include font($size: 12px);
+          width: 330px;
+          line-height: 20px;
+        }
+      }
+      &_brends {
+        margin-top: 50px;
+        height: 100px;
+        width: 100%;
+        img {
+          width: 90%;
+        }
+      }
+    }
+
+    &__strategy {
+      &_info {
+        &_pretitle {
+          @include font($size: 10px);
+        }
+        &_title {
+          margin-top: 10px;
+          width: 220px;
+          @include font($weight: 700, $size: 20px);
+        }
+        &_subtitle {
+          width: 240px;
+          margin-top: 10px;	
+          @include font($size: 12px);		
+        }
+      }
+      &_coment {
+        width: 264px;
+        height: 355px;
+        &_text {
+          @include font($size: 14px);
+          line-height: 23px;
+          padding: 0 20px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 100px;
+      &_title {
+        @include font($weight: 700, $size: 20px);
+        line-height: 30px;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+  
+      &_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 30px;
+        &_item {
+          width: 100%;
+          height: 190px;
+          align-items: center;
+          &_title {
+            @include font($weight: 500, $size: 14px);
+            text-align: center;
+          }
+          &_info {
+            @include font($weight: 400, $size: 10px);
+            text-align: center;
+            width: 150px;
+          }
+        }
+      }
+  
+      &_call {
+        bottom: -99px;
+        width: 100%;
+        height: 170px;
+        &_title {
+          @include font($weight: 700, $size: 22px);
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  $margin-common: 30px;
+	.home {
+    &__header {
+      height: 350px;
+      &_info {
+        margin-top: 20px;
+        &_pretitle {
+          @include font($size: 10px);
+        }
+        &_title {
+          @include font($weight: 700, $size: 20px);
+          line-height: 27px;
+          width: 206px;
+        }
+        &_subtitle {
+          margin-top: 10px;
+          @include font($size: 10px);
+          width: 230px;
+          line-height: 16px;
+        }
+      }
+      &_brends {
+        margin-top: 40px;
+      }
+    }
+
+    &__strategy {
+      &_info {
+        margin-top: 75px;
+        &_pretitle {
+          @include font($size: 8px);
+        }
+        &_title {
+          width: 200px;
+          @include font($weight: 700, $size: 17px);
+        }
+        &_subtitle {
+          width: 190px;
+          margin-top: 10px;	
+          @include font($size: 11px);		
+        }
+      }
+      &_coment {
+        width: 230px;
+        height: 285px;
+        &_text {
+          margin-top: 75px;
+          @include font($size: 12px);
+          line-height: 20px;
+        }
+      }
+    }
+
+    &__project {
+      hr {
+        margin-top: $margin-common;
+      }
+      &_info {
+        margin-top: $margin-common;
+        &_title {
+          width: 154px;
+          @include font($weight: 700, $size: 17px);
+          line-height: 25px;
+        }
+        &_subtitle {
+          @include font($size: 9px);
+          width: 200px;
+        }
+      }
+    }
+
+    &__product {
+      &_item {
+        margin-top: 30px;
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 100px;
+      hr {
+        margin-top: $margin-common;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+	.home {
+    &__header {
+      height: 300px;
+      &_info {
+        &_pretitle {
+          @include font($size: 8px);
+        }
+        &_title {
+          @include font($weight: 700, $size: 15px);
+          line-height: 22px;
+          width: 156px;
+        }
+        &_subtitle {
+          @include font($size: 8px);
+          width: 190px;
+          line-height: 14px;
+        }
+      }
+      &_brends {
+        margin-top: 30px;
+      }
+    }
+
+    &__strategy {
+      &_info {
+        &_pretitle {
+          @include font($size: 7px);
+        }
+        &_title {
+          width: 161px;
+          @include font($weight: 700, $size: 15px);
+        }
+        &_subtitle {
+          width: 160px;
+          margin-top: 5px;	
+          @include font($size: 8px);		
+        }
+      }
+      &_coment {
+        width: 180px;
+        height: 285px;
+        &_text {
+          margin-top: 75px;
+          @include font($size: 11px);
+          line-height: 18px;
+        }
+      }
+    }
+
+    &__project {
+      &_info {
+        &_title {
+          width: 127px;
+          @include font($weight: 700, $size: 14px);
+          line-height: 20px;
+        }
+        &_subtitle {
+          @include font($size: 7px);
+          width: 144px;
+        }
+      }
+    }
+
+    &__evaluation {
+      padding-bottom: 100px;
+      &_title {
+        @include font($weight: 700, $size: 18px);
+        line-height: 27px;
+        width: 250px;
+      }
+  
+      &_list {
+        &_item {
+          height: 170px;
+          &_info {
+            @include font($weight: 400, $size: 8px);
+            text-align: center;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 335px) {
+	.home {
+    &__header {
+      height: 250px;
+      &_brends {
+        margin-top: 20px;
+      }
+    }
+
+    &__strategy {
+      &_info {
+        margin-top: 120px;
+        &_pretitle {
+          @include font($size: 6px);
+        }
+        &_title {
+          width: 161px;
+          @include font($weight: 700, $size: 13px);
+        }
+        &_subtitle {
+          width: 160px;
+          margin-top: 5px;	
+          @include font($size: 7px);		
+        }
+      }
+      &_coment {
+        width: 180px;
+        height: 285px;
+        &_text {
+          margin-top: 120px;
+          @include font($size: 9px);
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}

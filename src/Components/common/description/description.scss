@@ -1,0 +1,134 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__title {
+    width: 397px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #4D533C;
+  }
+  &__text {
+    margin-top: 10px;
+    width: 421px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(33, 56, 66, 0.6);
+  }
+}
+.right {
+  padding-right: 130px;
+}
+.left {
+  padding-left: 130px;
+}
+
+@media screen and (max-width: 1230px) {
+  .right {
+    padding-right: 20px;
+    padding-left: 30px;
+  }
+  .left {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .description {
+    &__title {
+      width: 285px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    &__text {
+      margin-top: 0px;
+      width: 377px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .description {
+    &__title {
+      width: 239px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+    &__text {
+      width: 315px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .description {
+    &__title {
+      width: 191px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &__text {
+      width: 270px;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+  .right {
+    padding-left: 20px;
+  }
+  .left {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .description {
+    &__title {
+      width: 143px;
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &__text {
+      width: 220px;
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .description {
+    &__title {
+      width: 124px;
+      font-size: 13px;
+      line-height: 19px;
+    }
+    &__text {
+      width: 150px;
+      font-size: 7px;
+      line-height: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .description {
+    &__title {
+      width: 114px;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    &__text {
+      width: 120px;
+      font-size: 6px;
+      line-height: 9px;
+    }
+  }
+}
